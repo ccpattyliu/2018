@@ -1,0 +1,445 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>1124</title>
+    <link href="https://fonts.googleapis.com/css?family=Ranchers" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanstc.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="desktop.css">
+    <link rel="stylesheet" href="phone.css">
+    <link rel="stylesheet" href="tablet.css">
+    <link rel="stylesheet" href="hamburger.css">
+    <link rel="stylesheet" href="slick/slick/slick.css">
+    <link rel="stylesheet" href="slick/slick/slick-theme.css">
+    <script src="jquery-1.12.4.min.js"></script>
+    <script src="slick/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    <script>
+        new WOW().init();
+    </script>
+
+
+    <script>
+        $(document).ready(function(){
+            $("nav a").click(function(){
+                var _target = $(this).data("target");
+                var _offset = $("#"+_target).offset().top;
+                console.log(_offset);
+                $("html,body").animate({
+                    scrollTop:_offset
+                })
+            })
+            $("#gotop").click(function(){
+                $("html,body").animate({
+                    scrollTop:0
+                })
+                return false;
+            });
+            $("#gotop").hide();
+            $(window).scroll(function(){
+                var h = $("html,body").scrollTop();
+                if(h>500){
+                    $("#gotop").fadeIn();
+                }else{
+                    $("#gotop").fadeOut();
+                }
+            })
+            $(".hamburger").click(function(){
+                $(".hamburger").toggleClass("hamburger-x");
+                $(".menu").slideToggle();
+            })
+            $(window).resize(function(){
+                console.log($(window).width());
+                var w = $(window).width();
+                if(w>600){
+                    $(".menu").show();
+                }else{
+                    $(".menu").hide();
+                    $(".hamburger").removeClass("hamburger-x");
+                }
+            });
+            $("#news .sl").slick({
+                slidesToShow:4,
+                autoplay:true,
+                
+                responsive:[
+                    {
+                        breakpoint:1200,
+                        settings:{
+                            slidesToShow:2
+                        }
+                    },
+                    {
+                        breakpoint:600,
+                        settings:{
+                            slidesToShow:1
+                        }
+                    }
+                ]
+            });
+        })
+    </script>
+
+
+
+
+</head>
+
+<body>
+    <nav class="container">
+        <div class="wrapper clearfix">
+            <div class="hamburger"><span></span></div>
+            <div class="logo">Everything</div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#HOME">HOME</a></li>
+                    <li><a href="#works">WORKS</a></li>
+                    <li><a href="#service">SERVICE</a></li>
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#BLOG">BLOG</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="container">
+        <div class="wrapper">
+            <div class="wrapper-s">
+                <h1 class="animated rubberBand">AMAZING EVERYTHING</h1>
+                <p class="wow fadeInLeft">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit soluta maiores ratione quae similique, quos voluptatibus.
+            </div>
+        </div>
+    </header>
+    <div class="container" id="works">
+        <div class="wrapper-s">
+            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, sed?</h2>
+            <p class="wow fadeInLeft">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem aut repellat unde sapiente, rem deserunt iste similique velit nostrum dolore sit eligendi earum maiores deleniti voluptas ullam. Eveniet, deleniti, nobis.
+            </p>
+        </div>
+    </div>
+    <div class="container" id="banner"></div>
+    <div class="container" id="service">
+        <div class="wrapper">
+            <h2>BEST SERVICE</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam alias, iure! Reprehenderit.
+            </p>
+        </div>
+        <div class="wrapper clearfix">
+            <div class="col-3">
+                <div class="icon"><span class="fa fa-tree fa-5x"></span></div>
+                <h3 class="wow zoomInUp" data-wow-delay="0s">Web Design</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur repudiandae praesentium recusandae consectetur voluptatum excepturi id explicabo ea officia et.
+                </p>
+            </div>
+            <div class="col-3">
+                <div class="icon"><span class="fa fa-send fa-5x"></span></div>
+                <h3 class="wow zoomInUp" data-wow-delay="0.5s">Web Design</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur repudiandae praesentium recusandae consectetur voluptatum excepturi id explicabo ea officia et.
+                </p>
+            </div>
+            <div class="col-3" class="wow fadeInLeft">
+                <div class="icon" class="wow fadeInLeft" data-wow-delay="0.5s"><span class="fa fa-cube fa-5x"></span></div>
+                <h3 class="wow zoomInUp" data-wow-delay="1s">Web Design</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur repudiandae praesentium recusandae consectetur voluptatum excepturi id explicabo ea officia et.
+                </p>
+            </div>
+        </div>
+        <div class="wrapper clearfix">
+            <div class="col-3">
+                <div class="icon"><span class="fa fa-cloud-download fa-5x"></span></div>
+                <h3 class="wow zoomInUp" data-wow-delay="1.5s">Web Design</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur repudiandae praesentium recusandae consectetur voluptatum excepturi id explicabo ea officia et.
+                </p>
+            </div>
+            <div class="col-3">
+                <div class="icon"><span class="fa fa-coffee fa-5x"></span></div>
+                <h3 class="wow zoomInUp" data-wow-delay="2s">Web Design</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur repudiandae praesentium recusandae consectetur voluptatum excepturi id explicabo ea officia et.
+                </p>
+            </div>
+            <div class="col-3">
+                <div class="icon"><span class="fa fa-plug fa-5x"></span></div>
+                <h3 class="wow zoomInUp" data-wow-delay="2.5s">Web Design</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur repudiandae praesentium recusandae consectetur voluptatum excepturi id explicabo ea officia et.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="banner-2">
+        <div class="wrapper"></div>
+    </div>
+    <div class="container" id="about">
+        <div class="wrapper">
+            <h2>ABOUT US</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+        </div>
+        <div class="wrapper clearfix">
+            <div class="col-3 wow fadeInLeft" data-wow-delay="0s">
+                <div class="profile">
+                    <img src="images/011.jpg" alt="">
+                </div>
+                <div class="name">David Geller</div>
+                <div class="job">CEO of Company</div>
+            </div>
+            <div class="col-3 wow fadeInLeft" data-wow-delay="1s">
+                <div class="profile">
+                    <img src="images/011.jpg" alt="">
+                </div>
+                <div class="name">David Geller</div>
+                <div class="job">CEO of Company</div>
+            </div>
+            <div class="col-3 wow fadeInLeft" data-wow-delay="2s">
+                <div class="profile">
+                    <img src="images/011.jpg" alt="">
+                </div>
+                <div class="name">David Geller</div>
+                <div class="job">CEO of Company</div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="purchase">
+        <div class="wrapper">
+            <div class="display">Are you ready to enjoy?Grab this perfect Theme now!</div>
+            <a href="#">Purchase</a>
+        </div>
+    </div>
+    <div class="container" id="news">
+        <div class="wrapper">
+            <h2>LATEST NEWS</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+        </div>
+        <div class="wrapper clearfix sl">
+            <div class="col-4">
+                <div class="photo">
+                    <img src="images/s6.jpg" alt="">
+                    <div class="date">
+                        <div>14</div>
+                        <div>Mar</div>
+                    </div>
+                </div>
+                <h4>New Title</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet itaque pariatur ipsam dicta, incidunt velit.
+                </p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="col-4">
+                <div class="photo">
+                    <img src="images/s3.jpg" alt="">
+                    <div class="date">
+                        <div>14</div>
+                        <div>Mar</div>
+                    </div>
+                </div>
+                <h4>New Title</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet itaque pariatur ipsam dicta, incidunt velit.
+                </p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="col-4">
+                <div class="photo">
+                    <img src="images/s6.jpg" alt="">
+                    <div class="date">
+                        <div>14</div>
+                        <div>Mar</div>
+                    </div>
+                </div>
+                <h4>New Title</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet itaque pariatur ipsam dicta, incidunt velit.
+                </p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="col-4">
+                <div class="photo">
+                    <img src="images/s3.jpg" alt="">
+                    <div class="date">
+                        <div>14</div>
+                        <div>Mar</div>
+                    </div>
+                </div>
+                <h4>New Title</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet itaque pariatur ipsam dicta, incidunt velit.
+                </p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="col-4">
+                <div class="photo">
+                    <img src="images/s6.jpg" alt="">
+                    <div class="date">
+                        <div>14</div>
+                        <div>Mar</div>
+                    </div>
+                </div>
+                <h4>New Title</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet itaque pariatur ipsam dicta, incidunt velit.
+                </p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="col-4">
+                <div class="photo">
+                    <img src="images/s3.jpg" alt="">
+                    <div class="date">
+                        <div>14</div>
+                        <div>Mar</div>
+                    </div>
+                </div>
+                <h4>New Title</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet itaque pariatur ipsam dicta, incidunt velit.
+                </p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="col-4">
+                <div class="photo">
+                    <img src="images/s6.jpg" alt="">
+                    <div class="date">
+                        <div>14</div>
+                        <div>Mar</div>
+                    </div>
+                </div>
+                <h4>New Title</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet itaque pariatur ipsam dicta, incidunt velit.
+                </p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="col-4">
+                <div class="photo">
+                    <img src="images/s5.jpg" alt="">
+                    <div class="date">
+                        <div>14</div>
+                        <div>Mar</div>
+                    </div>
+                </div>
+                <h4>New Title</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet itaque pariatur ipsam dicta, incidunt velit.
+                </p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </div>
+
+
+     
+    <div class="container" id="sponsor">
+        <div class="wrapper">
+            <div class="brand">
+                <span class="fa fa-dropbox fa-4x"></span>
+            </div>
+            <div class="brand">
+                <span class="fa fa-facebook fa-4x"></span>
+            </div>
+            <div class="brand">
+                <span class="fa fa-github fa-4x"></span>
+            </div>
+            <div class="brand">
+                <span class="fa fa-apple fa-4x"></span>
+            </div>
+            <div class="brand">
+                <span class="fa fa-android fa-4x"></span>
+            </div>
+            <div class="brand">
+                <span class="fa fa-amazon fa-4x"></span>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="contact">
+        <div class="wrapper">
+            <h2>CONTACT</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis minus rem, architecto.
+            </p>
+        </div>
+        <div class="wrapper clearfix">
+            <div class="info">
+                <h3>INFORMATION</h3>
+                <div class="item clearfix">
+                    <div class="icon">
+                        <span class="fa fa-home"></span>
+                    </div>
+                    <div class="content">
+                        <ul>
+                            <li>California CA</li>
+                            <li>Afela inc.</li>
+                            <li>48792</li>
+                            <li>star Apple st 54</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item clearfix">
+                    <div class="icon">
+                        <span class="fa fa-mobile fa-lg"></span>
+                    </div>
+                    <div class="content">8005156223122</div>
+                </div>
+                <div class="item clearfix">
+                    <div class="icon">
+                        <span class="fa fa-envelope"></span>
+                    </div>
+                    <div class="content">asdfasW@gmail.com</div>
+                </div>
+            </div>
+            <div class="form">
+                <form action="">
+                    <div class="col-2">
+                        <input type="text" placeholder="Name">
+                    </div>
+                    <div class="col-2">
+                        <input type="text" placeholder="E-mail">
+                    </div>
+                    <div class="col-1">
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="col-1">
+                        <!--                        <input type="submit" value="SEND MESSAGE" class="bt">-->
+                        <button>SEND MESSAGE</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <footer class="container">
+        <div class="logo">EVERYTHING</div>
+        <div class="social">
+            <a href="#" class="fa fa-twitter fa-lg"></a>
+            <a href="#" class="fa fa-facebook fa-lg"></a>
+            <a href="#" class="fa fa-instagram fa-lg"></a>
+            <a href="#" class="fa fa-linkedin fa-lg"></a>
+            <a href="#" class="fa fa-vimeo fa-lg"></a>
+        </div>
+        <div class="copy">
+            &copy; 2017 EVERYTHING | Design By EVERYTHING
+        </div>
+    </footer>
+    <a href="#" id="gotop">TOP</a>
+</body>
+
+</html>

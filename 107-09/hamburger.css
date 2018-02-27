@@ -1,0 +1,58 @@
+ .hamburger{
+            width: 70px;
+            height: 70px;
+            position: relative;
+            background-color: pink;
+            border: 3px solid #d0c2c4;
+            cursor:pointer;     
+        }
+        .hamburger span{
+            width: 40px;
+            height: 6px;
+            background-color: #c2ffeb;
+            position: absolute;
+            top:0;
+            left: 0;
+            right:0;
+            bottom: 0;
+            margin: auto;
+            border-radius: 30px;/*圓角*/
+            transition: all .3s;
+            
+        }
+        .hamburger span::before, .hamburger span::after{
+            content: "";/*轉成區塊*/
+            display: block;
+            position: absolute;
+            width: 40px;
+            height: 6px;
+            background-color: beige;
+            border-radius: 30px;/*圓角*/
+/*            transition: all .3s;*/
+        }
+        .hamburger span::before{
+            top:-12px;/*往上跑12px*/
+            transition: transform .2s,top .2s .2s;
+        }
+        
+        .hamburger span::after{
+            bottom:-12px;/*往下跑12px*/
+            transition: transform .2s,bottom .2s .2s;
+        }
+        .hamburger-x span{
+           
+            background-color: transparent;
+          
+        }
+        
+        .hamburger-x span::before{
+          transform: rotate(45deg);
+            top:0;
+            transition: top .2s, transform .2s .2s;
+        }
+        
+        .hamburger-x span::after{
+          transform: rotate(-45deg);
+            bottom:0;
+            transition: bottom .2s, transform .2s .2s;
+        }
