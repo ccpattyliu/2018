@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.heart{
+			position: relative;
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			margin:50px;
+			transform:rotate(45deg);
+		}
+		.heart:before,.heart:after{
+			position: absolute;
+			content:'';
+			width: 100px;
+			height: 100px;
+			display:block;
+			border-radius: 50%;
+			background-color: red;
+
+		}
+		.heart:before{
+			left:-50px;
+			bottom:0;
+		}
+		.heart:after{
+			top:-50px;
+			right:0;
+		}
+		.container{
+			background-color: white;
+			width: auto;
+			height: 100%;
+			padding:20px;
+		}
+		.container1{
+			background-color: black;
+			width: auto;
+			height: 100%;
+			padding:20px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="heart">
+		</div>
+		
+
+	</div>
+	<div class="container1">
+		<div class="heart">
+		</div>
+	
+	</div>
+	
+	
+</body>
+</html>
