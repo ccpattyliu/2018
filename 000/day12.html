@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	.container{
+		width:700px;
+		margin: 0 auto;
+		background-color: black;
+	}
+	img{
+		width:100%;/*浮貼容器*/
+		height: auto;
+		display: block;/*可以去除圖片底下的留白*/
+	}
+	
+	.row{
+		margin: 0 -5px;
+	}
+	.clearfix{
+		clear:both;
+	}
+	.work{
+		float:left;
+		padding:0 5px;
+		width:33.3333333%;
+		box-sizing:border-box;
+	}
+	section{
+		background-color:pink ;
+	}
+	section.light{
+	background-color: #FFC0FB;
+	}
+	.work2{
+		float:left;
+		position: relative;
+		width:33.3333333%;
+		background-color: #ccc;
+	}
+	.info{
+		/*display: none;*/
+		opacity:0;
+		position:absolute;
+		top:0;
+		left: :0;
+		box-sizing: border-box;
+		padding-top:30px;
+		width:100%;
+		height: 100%;
+		text-align: center;
+		background-color: rgba(2,9,8,.3);
+	}
+	.info:hover {
+		opacity: 1;
+
+	}
+	.info p{
+		color: white;
+	}
+	.info2{
+		/*display: none;*/
+		opacity:0;
+		position:absolute;
+		top:0;
+		left: 0;
+		box-sizing: border-box;
+		padding-top:60px;
+		width:100%;
+		height: 100%;
+		text-align: center;
+		background-color: rgba(2,9,8,.3);
+	}
+	.info2:hover {
+		opacity: 1;
+
+	}
+	.info2 p{
+		color: white;
+	}
+	</style>
+
+</head>
+<body>
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="work2">
+					<img src="images/001.jpg" alt="">
+					<div class="info">
+			<button>view more</button>
+			<p>Great Job</p>
+		</div>
+				</div>
+				<div class="work2">
+					<img src="images/002.jpg" alt="">
+					<div class="info">
+			<button>view more</button>
+			<p>Great Job</p>
+		</div>
+				</div>
+				<div class="work2">
+					<img src="images/003.jpg" alt="">
+					<div class="info">
+			<button>view more</button>
+			<p>Great Job</p>
+		</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</section>
+	<section class="light">aaabbbccc</section>
+	<div class="row">
+	<div class="work2">
+		<img src="images/005.jpg" alt="">
+		<div class="info2">
+			<button>view more</button>
+			<p>Great Job</p>
+		</div>
+		</div>
+		<div class="work2">
+		<img src="images/002.jpg" alt="">
+		<div class="info2">
+			<button>view more</button>
+			<p>Great Job</p>
+		</div>
+		</div>
+		<div class="work2">
+		<img src="images/006.jpg" alt="">
+		<div class="info2">
+			<button>view more</button>
+			<p>Great Job</p>
+		</div>
+		</div>
+		點圖滑動
+		
+	</div>
+
+
+	
+</body>
+</html>
