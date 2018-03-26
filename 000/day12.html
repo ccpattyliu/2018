@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<script src="jquery-1.12.4.min.js"></script>
 	<style>
 	.container{
 		width:700px;
@@ -70,7 +71,7 @@
 		width:100%;
 		height: 100%;
 		text-align: center;
-		background-color: rgba(2,9,8,.3);
+		background-color: rgba(0,0,0,.3);
 	}
 	.info2:hover {
 		opacity: 1;
@@ -83,6 +84,13 @@
 
 </head>
 <body>
+	<script>
+		$(document).ready(function(){
+			$("h1").click(function(){
+				$("h2").fadeToggle(600);
+			});
+		});
+	</script>
 	<section>
 		<div class="container">
 			<div class="row">
@@ -137,6 +145,10 @@
 		點圖滑動
 		
 	</div>
+
+	<h1>點擊淡入淡出.</h1>
+	<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae quibusdam fugit laudantium pariatur deserunt fugiat, cupiditate sed mollitia accusantium beatae nam autem minus quisquam modi nobis, ipsum labore ab aut cumque esse quis error eius officiis. Debitis, facere. Vero dolores incidunt excepturi dolorum aperiam magnam ea nam tempora a in, quas deserunt quam? Illum corporis vero ratione cupiditate perferendis. Repudiandae!</h2>
+
 
 
 	
