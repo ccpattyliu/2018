@@ -1,0 +1,17 @@
+@media screen and (max-width: 991px){
+	#about{
+		position: static;
+		background-attachment: fixed,fixed;
+		padding-bottom: 10%
+	}
+	#inner{
+		top:50px;
+		text-align: center;
+	}
+	#photo{
+		margin:0 auto;
+	}
+	h3{
+		margin-top:30px;
+	}
+}
