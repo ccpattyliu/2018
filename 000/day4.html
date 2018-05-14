@@ -3,8 +3,138 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Day4</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		body{
+			background-color: beige;
+			font-family: Microsoft JhengHei;
+		}
+		#wrapper{
+			margin:0px auto;
+			width:1024px;
+		}
+		
+		nav{
+			background-color: #B63D32;
+			text-align: center;
+		}
+		ul{
+			display: inline-block;
+			margin:0px;
+		}
+		li{
+			list-style-type: none;
+			float:left;
+			text-align: center;
+		}
+		li a{
+			display: block;
+			padding:15px 20px;
+			color: #ffffff;
+			text-decoration: none;
+		}
+		li a:hover{
+			color: #ffc90e;
+		}
+		img{
+			height: 225px;
+			width: 3/100%;
+		}
+		#sidebar{
+			width: 250px;
+			height: 350px;
+			float:left;
+			background-color: #FCD2D8;
+		}
+		#sidebar ul{
+			margin-left: 65px;
+			margin-top: 30px;
+		}
+		#sidebar li{
+			float:none;
+		}
+		#sidebar li a{
+			color: #000000;
+			padding:10px 20px;
+			border-style: solid;
+			border-color: #B63d32;
+			margin: 10px;
+		}
+		#sidebar li a:hover{
+			color: #ffffff;
+
+		}
+		#content{
+			height: 350px;
+			float:left;
+			width:774px;
+			background-color: #f4f4ed;
+		}
+		#content_in{
+			padding:30px 50px;
+		}
+		#content h1{
+			color: #B63D32;
+			margin-bottom: 10px;
+		}
+		#content p{
+			font-size: 15px;
+			margin-bottom: 20px;
+		}
+		footer{
+			clear:both;
+			background-color: #71552A;
+			text-align: center;
+		}
+		footer p{
+			font-size:10px;
+			color: #ffffff;
+			padding:10px 0px;
+		}
+
+
+	</style>
 </head>
 <body>
+	<div id="wrapper">
+		<header>
+			<div id="logo">
+				<img src="images/s8.jpg" alt="">
+				<img src="images/s9.jpg" alt="">
+				<img src="images/s10.jpg" alt="">
+			</div>
+			<nav>
+				<ul>
+					<li><a href="#">首頁</a></li>
+					<li><a href="#">最新消息</a></li>
+					<li><a href="#">合作店家</a></li>
+					<li><a href="#">關於我們</a></li>
+					<li><a href="#">聯絡我們</a></li>
+				</ul>
+			</nav>
+		</header>
+			<div id="sidebar">
+				<ul>
+					<li><a href="#">購物流程</a></li>
+					<li><a href="#">常見問題</a></li>
+					<li><a href="#">優惠資訊</a></li>
+				</ul>
+			</div>
+			<div id="content">
+				<div id="content_in">
+					<h1>歡迎光臨</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio reprehenderit consectetur porro, dolores error ipsa molestiae. Voluptate quis, officia facere velit officiis eius excepturi, similique doloremque nesciunt, quam maiores sapiente.</p>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat ipsa facilis, eligendi nam, atque at. Rerum obcaecati sit, animi quis distinctio, labore iusto. Odio odit nulla veniam reprehenderit ipsum laboriosam?</p>
+				</div>
+			</div>
+			<footer>
+				<p>© 2018 Itoeat All rights reserved</p>
+			</footer>
+	</div>
 	
 </body>
 </html>
